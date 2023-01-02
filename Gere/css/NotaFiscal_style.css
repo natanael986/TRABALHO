@@ -1,0 +1,128 @@
+/* NOTAS FISCAIS DE SAIDA */
+.notas-fiscais-saida-container {
+    margin: 20px 20px 20px 45px !important;
+    border: 1px solid #DFE3E8;
+    border-radius: 10px;
+  }
+  
+  .notas-fiscais-saida-description p {
+    color: #fff;
+  }
+  
+  .notas-fiscais-saida-description {
+    background-color: #1E2536;
+    padding: 8px 15px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .notas-fiscais-saida-flex {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px
+  }
+  
+  .notas-fiscais-saida-card {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    border: 1px solid #DFE3E8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  .notas-fiscais-saida-card .notas-fiscais-saida-card-description {
+    color: #6E768E;
+  }
+  
+  .notas-fiscais-saida-card:hover {
+    background-color: #1E2536;
+  }
+  
+  .notas-fiscais-saida-card:hover .notas-fiscais-saida-card-description {
+    color: #F8F9FC;
+  }
+  
+  .notas-fiscais-saida-card:hover .notas-fiscais-card-icon path {
+    fill: #F8F9FC;
+  }
+  
+  .notas-fiscais-saida-card:hover .notas-fiscais-card-icon {
+    width: 42px !important;
+    height: 42px !important;
+    top: 15px;
+    left: 95px;
+  }
+  
+  .notas-fiscais-card-icon {
+    position: absolute;
+    left: 115px;
+    bottom: 115px;
+    fill: #1E2536;
+  }
+  
+  /* NOTAS FISCAIS DE ENTRADA */
+  .notas-fiscais-entrada-container {
+    margin: 20px 20px 20px 45px !important;
+    border: 1px solid #DFE3E8;
+    border-radius: 10px;
+  }
+  
+  .notas-fiscais-entrada-description p {
+    color: #fff;
+  }
+  
+  .notas-fiscais-entrada-description {
+    background-color: #2CC84D;
+    padding: 8px 15px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .notas-fiscais-entrada-flex {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px
+  }
+  
+  .notas-fiscais-entrada-card {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    border: 1px solid #DFE3E8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    text-decoration: none;
+  }
+  
+  .notas-fiscais-entrada-card .notas-fiscais-entrada-card-description {
+    color: #6E768E;
+  }
+  
+  .notas-fiscais-entrada-card:hover {
+    background-color: #2CC84D;
+  }
+  
+  .notas-fiscais-entrada-card:hover .notas-fiscais-entrada-card-description {
+    color: #F8F9FC;
+  }
+  
+  .notas-fiscais-entrada-card:hover .notas-fiscais-card-icon path {
+    fill: #F8F9FC;
+  }
+  
+  .notas-fiscais-entrada-card:hover .notas-fiscais-card-icon {
+    width: 42px !important;
+    height: 42px !important;
+    top: 15px;
+    left: 95px;
+  }

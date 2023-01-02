@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gere - Notas Fiscais</title>
+  <link rel="stylesheet" href="../../css/NotaFiscal_style.css" />
+  <link rel="stylesheet" href="../../css/index3_style.css" />
+  <!-- Boxiocns CDN Link -->
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../../img/gere-icon.png" sizes="192x192" />
+</head>
+
+<body>
+  <div class="sidebar close">
+    <div class="logo-details" style="padding-top: 20px">
+      <i onclick="index()" style="cursor: pointer">
+        <img src="../../img/gere-icon.png" width="40px" alt="" />
+      </i>
+      <img src="../../img/gere.png" width="80px" class="logo_name" alt="" onclick="index()" style="cursor: pointer" />
+    </div>
+    <ul class="nav-links">
+      <li class="nav-item">
+        <div class="iocn-link">
+          <a href="#">
+            <i class="nav-item-icon"><img src="../../img/icon/users.svg" alt="" /></i>
+            <span class="link_name">Vendas</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Vendas</a></li>
+          <li><a href="#" class="link_name-item">Pré-vendas</a></li>
+          <li><a href="#" class="link_name-item">Assinantes</a></li>
+          <li><a href="#" class="link_name-item">Programação</a></li>
+          <li><a href="#">CRM</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/phone.svg" alt="" /></i>
+          <span class="link_name">SAC</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">SAC</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/dollar-sign.svg" alt="" /></i>
+          <span class="link_name">Finanças</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Finanças</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/truck.svg" alt="" /></i>
+          <span class="link_name">Produção</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Produção</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/server.svg" alt="" /></i>
+          <span class="link_name">Rede</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Rede</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/pie-chart.svg" alt="" /></i>
+          <span class="link_name">Gerência</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Gerência</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/settings.svg" alt="" /></i>
+          <span class="link_name">Configurações</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Configurações</a></li>
+        </ul>
+      </li>
+      <li class="nav-item logout">
+        <a href="#">
+          <i class="nav-item-icon"><img src="../../img/icon/exit.svg" alt="" /></i>
+          <span class="link_name" style="color: #6e768e">Sair</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Sair</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <div class="home-nav-left">
+        <i class="bx bx-menu"></i>
+        <form action="" id="searchSubmit">
+          <input type="text" placeholder="Pesquisar" name="pesquisa" />
+          <a class="search-icon" href="#" onclick="searchSubmit()">
+            <img src="../../img/icon/search.svg" alt="pesquisar" />
+          </a>
+          <div class="dropdown-search">
+            <a class="filter-icon" href="#">
+              <img src="../../img/icon/filter.svg" alt="filtrar" />
+            </a>
+            <div class="search-options">
+              <ul>
+                <p class="search-options-title">FILTRO DE BUSCA</p>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon1.svg" alt="" />
+                    Todos os usuários</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon2.svg" alt="" />
+                    Assinantes Inativos</a>
+                  <p class="search-options-description">
+                    Usuários que cancelaram o plano
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon3.svg" alt="" />
+                    Fornecedor</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon4.svg" alt="" />
+                    Usuários na pré-venda</a>
+                  <p class="search-options-description">
+                    Usuários que estão decidindo
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon5.svg" alt="" />
+                    Condomínio</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon6.svg" alt="" />
+                    Rede</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon7.svg" alt="" />
+                    Assinante</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li class="search-option-spaced">
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon8.svg" alt="" />
+                    Roteador</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon9.svg" alt="" />
+                    Assinantes Ativos</a>
+                  <p class="search-options-description">
+                    Todos os assinantes da plataforma
+                  </p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="../../img/icon/search-dropdown/icon10.svg" alt="" />
+                    Agenda</a>
+                  <p class="search-options-description">
+                    Lorem ipsum dolor sit amet
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="home-nav-right">
+        <a href="#">
+          <img src="../../img/buttons/Suporte.svg" alt="Suporte" />
+        </a>
+        <a href="#">
+          <img src="../../img/buttons/Financeiro.svg" alt="Financeiro" />
+        </a>
+        <div class="dropdown-user">
+          <div class="user-icon">
+            <a href="#">
+              <img src="../../img/buttons/User.svg" alt="Usuário" class="user-button" />
+            </a>
+            <div class="badge-notification">
+              <div class="badge-indicator">6</div>
+            </div>
+          </div>
+          <div class="user-options">
+            <ul>
+              <p>USUÁRIO</p>
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/chamadasviaweb.svg" alt="" />Chamados via Web</a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../../img/icon/user-dropdown/atendimentos.svg" alt="" />
+                  Atendimentos
+                  <div class="badge-notification">
+                    <div class="badge-indicator">4</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/ordensdeservico.svg" alt="" />Ordens de Serviço
+                  <div class="badge-notification">
+                    <div class="badge-indicator">2</div>
+                  </div>
+                </a>
+              </li>
+              <hr class="user-options-divider" />
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/assinantes.svg" alt="" />Assinantes</a>
+              </li>
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/prevendas.svg" alt="" />Pré-Vendas</a>
+              </li>
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/fornecedores.svg" alt="" />Fornecedores</a>
+              </li>
+              <hr class="user-options-divider" />
+              <li>
+                <a href="#"><img src="../../img/icon/user-dropdown/logoff.svg" alt="" />Sair</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider">
+      <hr class="divider-line" />
+    </div>
+    <!-- BODY PAGE CONTENT START -->
+    <div class="body">
+      <div class="notas-fiscais-saida-container">
+        <div class="notas-fiscais-saida-description">
+          <p>Notas Fiscais de Saída</p>
+        </div>
+        <div class="notas-fiscais-saida-flex">
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-saida-card-description">
+              Perfil de emissão
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-saida-card-description">Produtos</p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-saida-card-description">Tributação</p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-saida-card-description">
+              Série de<br />Nota Fiscal
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M17.6407 10.98C17.6818 10.66 17.7127 10.34 17.7127 10C17.7127 9.66 17.6818 9.34 17.6407 9.02L19.8099 7.37C20.0052 7.22 20.0566 6.95 19.9333 6.73L17.8772 3.27C17.7846 3.11 17.6099 3.02 17.4248 3.02C17.3631 3.02 17.3014 3.03 17.25 3.05L14.6902 4.05C14.1556 3.65 13.5799 3.32 12.9528 3.07L12.5621 0.42C12.5313 0.18 12.3154 0 12.0584 0H7.94616C7.68915 0 7.47326 0.18 7.44242 0.42L7.05176 3.07C6.42464 3.32 5.84894 3.66 5.31435 4.05L2.7545 3.05C2.69281 3.03 2.63113 3.02 2.56945 3.02C2.39468 3.02 2.21991 3.11 2.12738 3.27L0.0712765 6.73C-0.0623704 6.95 -0.00068705 7.22 0.194643 7.37L2.36384 9.02C2.32271 9.34 2.29187 9.67 2.29187 10C2.29187 10.33 2.32271 10.66 2.36384 10.98L0.194643 12.63C-0.00068705 12.78 -0.0520898 13.05 0.0712765 13.27L2.12738 16.73C2.21991 16.89 2.39468 16.98 2.57973 16.98C2.64141 16.98 2.70309 16.97 2.7545 16.95L5.31435 15.95C5.84894 16.35 6.42464 16.68 7.05176 16.93L7.44242 19.58C7.47326 19.82 7.68915 20 7.94616 20H12.0584C12.3154 20 12.5313 19.82 12.5621 19.58L12.9528 16.93C13.5799 16.68 14.1556 16.34 14.6902 15.95L17.25 16.95C17.3117 16.97 17.3734 16.98 17.4351 16.98C17.6099 16.98 17.7846 16.89 17.8772 16.73L19.9333 13.27C20.0566 13.05 20.0052 12.78 19.8099 12.63L17.6407 10.98ZM15.6052 9.27C15.6463 9.58 15.6566 9.79 15.6566 10C15.6566 10.21 15.636 10.43 15.6052 10.73L15.4612 11.86L16.3762 12.56L17.4865 13.4L16.7669 14.61L15.4612 14.1L14.3921 13.68L13.4668 14.36C13.0247 14.68 12.6032 14.92 12.1817 15.09L11.092 15.52L10.9275 16.65L10.7219 18H9.28263L9.0873 16.65L8.92281 15.52L7.83308 15.09C7.39102 14.91 6.97979 14.68 6.56857 14.38L5.63304 13.68L4.54331 14.11L3.23768 14.62L2.51804 13.41L3.62834 12.57L4.54331 11.87L4.39938 10.74C4.36854 10.43 4.34798 10.2 4.34798 10C4.34798 9.8 4.36854 9.57 4.39938 9.27L4.54331 8.14L3.62834 7.44L2.51804 6.6L3.23768 5.39L4.54331 5.9L5.61248 6.32L6.53773 5.64C6.97979 5.32 7.4013 5.08 7.8228 4.91L8.91253 4.48L9.07702 3.35L9.28263 2H10.7116L10.907 3.35L11.0714 4.48L12.1612 4.91C12.6032 5.09 13.0145 5.32 13.4257 5.62L14.3612 6.32L15.451 5.89L16.7566 5.38L17.4762 6.59L16.3762 7.44L15.4612 8.14L15.6052 9.27ZM10.0023 6C7.73027 6 5.89006 7.79 5.89006 10C5.89006 12.21 7.73027 14 10.0023 14C12.2743 14 14.1145 12.21 14.1145 10C14.1145 7.79 12.2743 6 10.0023 6ZM10.0023 12C8.87141 12 7.94616 11.1 7.94616 10C7.94616 8.9 8.87141 8 10.0023 8C11.1331 8 12.0584 8.9 12.0584 10C12.0584 11.1 11.1331 12 10.0023 12Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">
+              Gerar<br />Nota Fiscal
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M10 12H12V9H15V7H12V4H10V7H7V9H10V12ZM20 0H2C0.89 0 0 0.89 0 2V14C0 15.1 0.89 16 2 16H7V18H15V16H20C21.1 16 22 15.1 22 14V2C22 0.89 21.1 0 20 0ZM20 14H2V2H20V14Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">
+              Gerar<br />Arquivos
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M9 0L0 4V10C0 15.55 3.84 20.74 9 22C14.16 20.74 18 15.55 18 10V4L9 0ZM16 10C16 14.52 13.02 18.69 9 19.93C4.98 18.69 2 14.52 2 10V5.3L9 2.19L16 5.3V10ZM4.41 10.59L3 12L7 16L15 8L13.59 6.58L7 13.17L4.41 10.59Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">Validar Notas</p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 16H2V2H16V16ZM14 10H4V8H14V10ZM14 6H4V4H14V6ZM11 14H4V12H11V14Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">
+              Notas<br />Fiscais
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M10 0H2C0.9 0 0 0.9 0 2V18C0 19.1 0.89 20 1.99 20H14C15.1 20 16 19.1 16 18V6L10 0ZM14 18H2V2H9V7H14V18Z"
+                fill="#1E2536" />
+              <path d="M6.356 13.492V16H5.764L4.772 14.552V16H4.192V13.492H4.78L5.776 14.996V13.492H6.356Z"
+                fill="#1E2536" />
+              <path d="M7.35888 15.088V16H6.73887V13.492H8.43087V14.052H7.35888V14.568H8.28288V15.088H7.35888Z"
+                fill="#1E2536" />
+              <path d="M9.86103 14.5V14.952H8.58503V14.5H9.86103Z" fill="#1E2536" />
+              <path
+                d="M11.7963 15.416V15.892C11.7323 15.932 11.6243 15.9667 11.4723 15.996C11.3203 16.0253 11.1603 16.04 10.9923 16.04C10.6723 16.04 10.4416 15.96 10.3003 15.8C10.1589 15.6373 10.0883 15.3747 10.0883 15.012C10.0883 14.6573 10.1629 14.3973 10.3123 14.232C10.4616 14.0667 10.6976 13.984 11.0203 13.984C11.3349 13.984 11.5563 14.0467 11.6843 14.172C11.8149 14.2947 11.8803 14.5133 11.8803 14.828C11.8803 14.9133 11.8789 14.9813 11.8763 15.032C11.8736 15.0827 11.8683 15.1413 11.8603 15.208H10.6923C10.6949 15.3173 10.7243 15.3933 10.7803 15.436C10.8363 15.4787 10.9389 15.5 11.0883 15.5C11.2163 15.5 11.3469 15.492 11.4803 15.476C11.6136 15.4573 11.7189 15.4373 11.7963 15.416ZM11.0203 14.496C10.8923 14.496 10.8056 14.5187 10.7603 14.564C10.7149 14.6067 10.6923 14.692 10.6923 14.82H11.3363V14.732C11.3336 14.6387 11.3109 14.576 11.2683 14.544C11.2283 14.512 11.1456 14.496 11.0203 14.496Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">NFE</p>
+          </a>
+          <a href="#" class="notas-fiscais-saida-card">
+            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M10 0H2C0.9 0 0 0.9 0 2V18C0 19.1 0.89 20 1.99 20H14C15.1 20 16 19.1 16 18V6L10 0ZM14 18H2V2H9V7H14V18Z"
+                fill="#1E2536" />
+              <path d="M5.356 13.492V16H4.764L3.772 14.552V16H3.192V13.492H3.78L4.776 14.996V13.492H5.356Z"
+                fill="#1E2536" />
+              <path d="M6.35888 15.088V16H5.73887V13.492H7.43087V14.052H6.35888V14.568H7.28288V15.088H6.35888Z"
+                fill="#1E2536" />
+              <path
+                d="M8.62447 15.064L8.11647 14.944C7.9138 14.896 7.77514 14.8227 7.70047 14.724C7.62847 14.6253 7.59247 14.484 7.59247 14.3C7.59247 14.0093 7.66847 13.796 7.82047 13.66C7.97514 13.5213 8.2138 13.452 8.53647 13.452C8.6698 13.452 8.78847 13.4573 8.89247 13.468C8.99647 13.4787 9.09247 13.4973 9.18047 13.524V14.08C8.9778 14.0453 8.8378 14.0253 8.76047 14.02C8.6858 14.0147 8.60713 14.012 8.52447 14.012C8.41247 14.012 8.33114 14.0307 8.28047 14.068C8.2298 14.1053 8.20447 14.168 8.20447 14.256C8.20447 14.2987 8.21247 14.332 8.22847 14.356C8.24447 14.3773 8.27514 14.3933 8.32047 14.404L8.80047 14.516C8.93914 14.548 9.03913 14.58 9.10047 14.612C9.1618 14.6413 9.21113 14.68 9.24847 14.728C9.29113 14.7787 9.3218 14.844 9.34047 14.924C9.3618 15.004 9.37247 15.1013 9.37247 15.216C9.37247 15.5067 9.29514 15.7173 9.14047 15.848C8.9858 15.976 8.7458 16.04 8.42047 16.04C8.25514 16.04 8.0978 16.0293 7.94847 16.008C7.79914 15.9893 7.68314 15.9653 7.60047 15.936V15.348C7.70714 15.3827 7.8338 15.4107 7.98047 15.432C8.12714 15.4507 8.2738 15.46 8.42047 15.46C8.5378 15.46 8.61914 15.4453 8.66447 15.416C8.7098 15.3867 8.73247 15.328 8.73247 15.24C8.73247 15.184 8.72447 15.144 8.70847 15.12C8.69514 15.0933 8.66714 15.0747 8.62447 15.064Z"
+                fill="#1E2536" />
+              <path d="M10.8415 14.5V14.952H9.5655V14.5H10.8415Z" fill="#1E2536" />
+              <path
+                d="M12.7768 15.416V15.892C12.7128 15.932 12.6048 15.9667 12.4528 15.996C12.3007 16.0253 12.1407 16.04 11.9727 16.04C11.6528 16.04 11.4221 15.96 11.2808 15.8C11.1394 15.6373 11.0688 15.3747 11.0688 15.012C11.0688 14.6573 11.1434 14.3973 11.2928 14.232C11.4421 14.0667 11.6781 13.984 12.0007 13.984C12.3154 13.984 12.5367 14.0467 12.6648 14.172C12.7954 14.2947 12.8608 14.5133 12.8608 14.828C12.8608 14.9133 12.8594 14.9813 12.8568 15.032C12.8541 15.0827 12.8488 15.1413 12.8407 15.208H11.6728C11.6754 15.3173 11.7048 15.3933 11.7607 15.436C11.8167 15.4787 11.9194 15.5 12.0688 15.5C12.1968 15.5 12.3274 15.492 12.4608 15.476C12.5941 15.4573 12.6994 15.4373 12.7768 15.416ZM12.0007 14.496C11.8727 14.496 11.7861 14.5187 11.7408 14.564C11.6954 14.6067 11.6728 14.692 11.6728 14.82H12.3167V14.732C12.3141 14.6387 12.2914 14.576 12.2487 14.544C12.2087 14.512 12.1261 14.496 12.0007 14.496Z"
+                fill="#1E2536" />
+            </svg>
+
+            <p class="notas-fiscais-saida-card-description">NFS-E</p>
+          </a>
+        </div>
+      </div>
+      <div class="notas-fiscais-entrada-container">
+        <div class="notas-fiscais-entrada-description">
+          <p>Notas Fiscais de Entrada</p>
+        </div>
+        <div class="notas-fiscais-entrada-flex">
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">Empresas</p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">Fornecedores</p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M10 12H12V9H15V7H12V4H10V7H7V9H10V12ZM20 0H2C0.89 0 0 0.89 0 2V14C0 15.1 0.89 16 2 16H7V18H15V16H20C21.1 16 22 15.1 22 14V2C22 0.89 21.1 0 20 0ZM20 14H2V2H20V14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">
+              Obter XML<br />da NFe
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M10 12H12V9H15V7H12V4H10V7H7V9H10V12ZM20 0H2C0.89 0 0 0.89 0 2V14C0 15.1 0.89 16 2 16H7V18H15V16H20C21.1 16 22 15.1 22 14V2C22 0.89 21.1 0 20 0ZM20 14H2V2H20V14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">
+              Armazenar<br />XML
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">
+              Inclusão<br />Manual
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M17.6407 10.98C17.6818 10.66 17.7127 10.34 17.7127 10C17.7127 9.66 17.6818 9.34 17.6407 9.02L19.8099 7.37C20.0052 7.22 20.0566 6.95 19.9333 6.73L17.8772 3.27C17.7846 3.11 17.6099 3.02 17.4248 3.02C17.3631 3.02 17.3014 3.03 17.25 3.05L14.6902 4.05C14.1556 3.65 13.5799 3.32 12.9528 3.07L12.5621 0.42C12.5313 0.18 12.3154 0 12.0584 0H7.94616C7.68915 0 7.47326 0.18 7.44242 0.42L7.05176 3.07C6.42464 3.32 5.84894 3.66 5.31435 4.05L2.7545 3.05C2.69281 3.03 2.63113 3.02 2.56945 3.02C2.39468 3.02 2.21991 3.11 2.12738 3.27L0.0712765 6.73C-0.0623704 6.95 -0.00068705 7.22 0.194643 7.37L2.36384 9.02C2.32271 9.34 2.29187 9.67 2.29187 10C2.29187 10.33 2.32271 10.66 2.36384 10.98L0.194643 12.63C-0.00068705 12.78 -0.0520898 13.05 0.0712765 13.27L2.12738 16.73C2.21991 16.89 2.39468 16.98 2.57973 16.98C2.64141 16.98 2.70309 16.97 2.7545 16.95L5.31435 15.95C5.84894 16.35 6.42464 16.68 7.05176 16.93L7.44242 19.58C7.47326 19.82 7.68915 20 7.94616 20H12.0584C12.3154 20 12.5313 19.82 12.5621 19.58L12.9528 16.93C13.5799 16.68 14.1556 16.34 14.6902 15.95L17.25 16.95C17.3117 16.97 17.3734 16.98 17.4351 16.98C17.6099 16.98 17.7846 16.89 17.8772 16.73L19.9333 13.27C20.0566 13.05 20.0052 12.78 19.8099 12.63L17.6407 10.98ZM15.6052 9.27C15.6463 9.58 15.6566 9.79 15.6566 10C15.6566 10.21 15.636 10.43 15.6052 10.73L15.4612 11.86L16.3762 12.56L17.4865 13.4L16.7669 14.61L15.4612 14.1L14.3921 13.68L13.4668 14.36C13.0247 14.68 12.6032 14.92 12.1817 15.09L11.092 15.52L10.9275 16.65L10.7219 18H9.28263L9.0873 16.65L8.92281 15.52L7.83308 15.09C7.39102 14.91 6.97979 14.68 6.56857 14.38L5.63304 13.68L4.54331 14.11L3.23768 14.62L2.51804 13.41L3.62834 12.57L4.54331 11.87L4.39938 10.74C4.36854 10.43 4.34798 10.2 4.34798 10C4.34798 9.8 4.36854 9.57 4.39938 9.27L4.54331 8.14L3.62834 7.44L2.51804 6.6L3.23768 5.39L4.54331 5.9L5.61248 6.32L6.53773 5.64C6.97979 5.32 7.4013 5.08 7.8228 4.91L8.91253 4.48L9.07702 3.35L9.28263 2H10.7116L10.907 3.35L11.0714 4.48L12.1612 4.91C12.6032 5.09 13.0145 5.32 13.4257 5.62L14.3612 6.32L15.451 5.89L16.7566 5.38L17.4762 6.59L16.3762 7.44L15.4612 8.14L15.6052 9.27ZM10.0023 6C7.73027 6 5.89006 7.79 5.89006 10C5.89006 12.21 7.73027 14 10.0023 14C12.2743 14 14.1145 12.21 14.1145 10C14.1145 7.79 12.2743 6 10.0023 6ZM10.0023 12C8.87141 12 7.94616 11.1 7.94616 10C7.94616 8.9 8.87141 8 10.0023 8C11.1331 8 12.0584 8.9 12.0584 10C12.0584 11.1 11.1331 12 10.0023 12Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">
+              Conciliar<br />Notas Fiscais
+            </p>
+          </a>
+          <a href="#" class="notas-fiscais-entrada-card">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="notas-fiscais-card-icon">
+              <path
+                d="M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 16H2V2H16V16ZM14 10H4V8H14V10ZM14 6H4V4H14V6ZM11 14H4V12H11V14Z"
+                fill="#1E2536" />
+            </svg>
+            <p class="notas-fiscais-entrada-card-description">
+              Notas<br />Fiscais
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- BODY PAGE CONTENT END -->
+  </section>
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    });
+
+    function searchSubmit() {
+      document.getElementById("searchSubmit").submit();
+    }
+
+    function index() {
+      window.location.href = "../index.html";
+    }
+  </script>
+</body>
+
+</html>

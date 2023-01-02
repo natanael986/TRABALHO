@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gere - Incluir Pré-Venda</title>
+    <link rel="stylesheet" href="../../css/index3_style.css" />
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../img/gere-icon.png" sizes="192x192" />
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details" style="padding-top: 20px">
+        <i onclick="index()" style="cursor: pointer">
+          <img src="../../img/gere-icon.png" width="40px" alt="" />
+        </i>
+        <img
+          src="../../img/gere.png"
+          width="80px"
+          class="logo_name"
+          alt=""
+          onclick="index()"
+          style="cursor: pointer"
+        />
+      </div>
+      <ul class="nav-links">
+        <li class="nav-item">
+          <div class="iocn-link">
+            <a href="#">
+              <i class="nav-item-icon"
+                ><img src="../../img/icon/users.svg" alt=""
+              /></i>
+              <span class="link_name">Vendas</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Vendas</a></li>
+            <li><a href="#" class="link_name-item">Pré-vendas</a></li>
+            <li><a href="#" class="link_name-item">Assinantes</a></li>
+            <li><a href="#" class="link_name-item">Programação</a></li>
+            <li><a href="#">CRM</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/phone.svg" alt=""
+            /></i>
+            <span class="link_name">SAC</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">SAC</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/dollar-sign.svg" alt=""
+            /></i>
+            <span class="link_name">Finanças</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Finanças</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/truck.svg" alt=""
+            /></i>
+            <span class="link_name">Produção</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Produção</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/server.svg" alt=""
+            /></i>
+            <span class="link_name">Rede</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Rede</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/pie-chart.svg" alt=""
+            /></i>
+            <span class="link_name">Gerência</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Gerência</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/settings.svg" alt=""
+            /></i>
+            <span class="link_name">Configurações</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Configurações</a></li>
+          </ul>
+        </li>
+        <li class="nav-item logout">
+          <a href="#">
+            <i class="nav-item-icon"
+              ><img src="../../img/icon/exit.svg" alt=""
+            /></i>
+            <span class="link_name" style="color: #6e768e">Sair</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Sair</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <div class="home-nav-left">
+          <i class="bx bx-menu"></i>
+          <form action="" id="searchSubmit">
+            <input type="text" placeholder="Pesquisar" name="pesquisa" />
+            <a class="search-icon" href="#" onclick="searchSubmit()">
+              <img src="../../img/icon/search.svg" alt="pesquisar" />
+            </a>
+            <div class="dropdown-search">
+              <a class="filter-icon" href="#">
+                <img src="../../img/icon/filter.svg" alt="filtrar" />
+              </a>
+              <div class="search-options">
+                <ul>
+                  <p class="search-options-title">FILTRO DE BUSCA</p>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon1.svg"
+                        alt=""
+                      />
+                      Todos os usuários</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon2.svg"
+                        alt=""
+                      />
+                      Assinantes Inativos</a
+                    >
+                    <p class="search-options-description">
+                      Usuários que cancelaram o plano
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon3.svg"
+                        alt=""
+                      />
+                      Fornecedor</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon4.svg"
+                        alt=""
+                      />
+                      Usuários na pré-venda</a
+                    >
+                    <p class="search-options-description">
+                      Usuários que estão decidindo
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon5.svg"
+                        alt=""
+                      />
+                      Condomínio</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon6.svg"
+                        alt=""
+                      />
+                      Rede</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon7.svg"
+                        alt=""
+                      />
+                      Assinante</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li class="search-option-spaced">
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon8.svg"
+                        alt=""
+                      />
+                      Roteador</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon9.svg"
+                        alt=""
+                      />
+                      Assinantes Ativos</a
+                    >
+                    <p class="search-options-description">
+                      Todos os assinantes da plataforma
+                    </p>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img
+                        src="../../img/icon/search-dropdown/icon10.svg"
+                        alt=""
+                      />
+                      Agenda</a
+                    >
+                    <p class="search-options-description">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="home-nav-right">
+          <a href="#">
+            <img src="../../img/buttons/Suporte.svg" alt="Suporte" />
+          </a>
+          <a href="#">
+            <img src="../../img/buttons/Financeiro.svg" alt="Financeiro" />
+          </a>
+          <div class="dropdown-user">
+            <div class="user-icon">
+              <a href="#">
+                <img
+                  src="../../img/buttons/User.svg"
+                  alt="Usuário"
+                  class="user-button"
+                />
+              </a>
+              <div class="badge-notification">
+                <div class="badge-indicator">6</div>
+              </div>
+            </div>
+            <div class="user-options">
+              <ul>
+                <p>USUÁRIO</p>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/chamadasviaweb.svg"
+                      alt=""
+                    />Chamados via Web</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="../../img/icon/user-dropdown/atendimentos.svg"
+                      alt=""
+                    />
+                    Atendimentos
+                    <div class="badge-notification">
+                      <div class="badge-indicator">4</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/ordensdeservico.svg"
+                      alt=""
+                    />Ordens de Serviço
+                    <div class="badge-notification">
+                      <div class="badge-indicator">2</div>
+                    </div>
+                  </a>
+                </li>
+                <hr class="user-options-divider" />
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/assinantes.svg"
+                      alt=""
+                    />Assinantes</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/prevendas.svg"
+                      alt=""
+                    />Pré-Vendas</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/fornecedores.svg"
+                      alt=""
+                    />Fornecedores</a
+                  >
+                </li>
+                <hr class="user-options-divider" />
+                <li>
+                  <a href="#"
+                    ><img
+                      src="../../img/icon/user-dropdown/logoff.svg"
+                      alt=""
+                    />Sair</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider">
+        <hr class="divider-line" />
+      </div>
+      <!-- BODY PAGE CONTENT START -->
+      <div class="body">
+        <div class="atendimento-container" style="height: 70vh">
+          <iframe
+            src="https://demonstra.gerenet.com.br/inicial/new/index.php?tela=Incluir&iframe=true"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      </div>
+      <!-- BODY PAGE CONTENT END -->
+    </section>
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement;
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+
+      function searchSubmit() {
+        document.getElementById("searchSubmit").submit();
+      }
+
+      function index() {
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>

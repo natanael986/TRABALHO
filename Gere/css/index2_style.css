@@ -1,0 +1,329 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Blinker', sans-serif;
+  transition: all 0.1s ease;
+}
+
+.index-hero {
+  background-color: #1E2536;
+  border-radius: 0px 0px 18px 18px;
+  padding-bottom: 120px;
+}
+
+nav {
+  padding: 32px 70px 32px 70px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-buttons button {
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  border-color: #F8F9FC;
+  color: #F8F9FC;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  width: 131px;
+  height: 46px;
+}
+
+.btn-active {
+  background-color: #2CC84D !important;
+  color: #1E2536 !important;
+  border: none !important;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.index-hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 70px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.index-card {
+  background-color: #181F2E;
+  color: #6E768E;
+  width: 326px;
+  height: 277px;
+  border-radius: 10px;
+  border-top: 15px solid #6E768E;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.index-card:hover {
+  border-top: 15px solid #2CC84D;
+}
+
+.index-card .card-icon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  left: 250px;
+  top: -30px;
+}
+
+.index-card .card-logo {
+  margin-bottom: 20px;
+}
+
+.index-card a {
+  color: #6E768E;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  margin-right: auto;
+}
+
+.index-card .card-link::after {
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 3px;
+  content: url('../img/icon/Chevron-left-index-card.svg');
+}
+
+.index-card-image {
+  grid-column: 2/-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.index-card-banner {
+  height: 277px;
+  width: 100%;
+}
+
+.geretech-button {
+  display: inline;
+  background-color: transparent;
+}
+
+.geretech-btn {
+  position: absolute;
+  bottom: 29px;
+  left: 150px;
+}
+
+.content-section {
+  padding: 11px;
+  position: relative;
+}
+
+.content-section h3 {
+  font-size: 20px;
+  padding-left: 55px;
+}
+
+.content-section h3::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 4px;
+  height: 24px;
+  background-color: #2CC84D;
+  left: 62px;
+}
+
+.index-info-grid-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+  padding-right: auto;
+  padding-left: auto;
+}
+
+.info-card {
+  width: 326px;
+  height: 319px;
+  background: #F8F9FC;
+  border-radius: 16px;
+}
+
+.text-secondary-layout {
+  color: #6E768E;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.info-card-content {
+  padding: 28px 32px;
+}
+
+.info-card p {
+  font-size: 20px;
+  line-height: 24px;
+  width: 258px;
+  height: 78px;
+}
+
+.info-card a {
+  color: #2CC84D;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  margin-right: auto;
+}
+
+footer {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 83px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  gap: 20px;
+}
+
+.info-card .card-link::after {
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 3px;
+  content: url('../img/icon/Chevron-left-info.svg');
+}
+
+.menu-mobile {
+  display: none;
+  fill: white;
+}
+
+@media (max-width: 1500px) {
+  .index-hero-container {
+    height: 900px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px 150px 0px 150px;
+  }
+
+  .index-card-image {
+    grid-column: 1/-1;
+  }
+
+  .index-info-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .index-card {
+    margin: 0 auto;
+  }
+
+  .info-card {
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .index-hero-container {
+    height: 900px;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 0px 0px 0px;
+  }
+
+  .index-card-image {
+    display: none;
+  }
+
+  .index-info-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .index-hero-container {
+    height: 1580px;
+    grid-template-columns: 1fr;
+    padding-top: 180px;
+  }
+
+  .index-card-image {
+    display: none;
+  }
+
+  .index-info-grid-container {
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  nav {
+    justify-content: space-around;
+
+    flex-wrap: nowrap;
+    position: fixed;
+    background-color: #181F2E;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-buttons {
+    display: none;
+    position: absolute;
+    top: 120px;
+  }
+
+  .navBtnsMobile {
+    display: flex;
+  }
+
+  .navbarMobile {
+    padding-bottom: 130px;
+  }
+}
+
+/* Tablets e Celulares */
+@media (max-width: 780px) {
+  @media (min-height: 1000px) {
+    .index-hero-container {
+      height: 1200px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .index-info-grid-container {
+      grid-template-columns: 1fr 1fr;
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .info-card {
+    padding-left: 0;
+    margin-left: -6px;
+  }
+}
